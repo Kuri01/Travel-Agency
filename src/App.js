@@ -15,6 +15,7 @@ import { setMultipleStates } from './redux/globalRedux';
 import CountryContainer from './components/views/Country/CountryContainer';
 import Trip from './components/views/Trip/TripContainer';
 import { AnimatedSwitch } from 'react-router-transition';
+import styles from './App.module.scss';
 
 class App extends React.Component {
   static propTypes = {
@@ -40,9 +41,10 @@ class App extends React.Component {
       <BrowserRouter>
         <MainLayout>
           <AnimatedSwitch
-            atEnter={{ opacity: 1 }}
+            atEnter={{ opacity: 0, top: -200 }}
             atLeave={{ opacity: 0 }}
             atActive={{ opacity: 1 }}
+            className={styles.switchWrapper}
           >
             <Route exact path='/' component={Home} />
             <Route exact path='/trips' component={Trips} />
