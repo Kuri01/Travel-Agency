@@ -1,0 +1,21 @@
+.switchWrapper {
+  position: relative;
+
+  > :first-child ~ * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation-name: slide;
+    animation-duration: 2s;
+  }
+}
+
+@keyframes slide {
+  from {
+    top: 200px;
+  }
+  to {
+    top: 0;
+  }
+}
