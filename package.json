@@ -26,9 +26,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint src/"
+    "lint": "eslint src/",
+    "test": "jest --colors",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage --colors"
   },
   "husky": {
     "hooks": {
@@ -55,5 +57,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest-css-modules": "^2.0.0",
+    "jest-environment-jsdom-fourteen": "^0.1.0",
+    "jest-prop-type-error": "^1.1.0",
+    "jest-resolve": "^24.8.0",
+    "jest-watch-typeahead": "^0.3.1",
+    "react-test-renderer": "^16.8.6"
   }
 }
