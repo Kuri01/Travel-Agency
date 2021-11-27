@@ -24,6 +24,7 @@ const OrderForm = ({ tripCost, options, setOrderOption }) => (
     )}
     <Col xs={12}>
       <OrderSummary tripCost={tripCost} tripOptions={options} />
+      {console.log(options)}
     </Col>
   </Row>
 );
