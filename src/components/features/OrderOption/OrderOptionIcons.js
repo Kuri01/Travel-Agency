@@ -26,9 +26,10 @@ const OrderOptionIcons = ({
         >
           {' '}
           <Icon name={value.icon} />
-          {value.name} ({formatPrice(value.price)})
+          {value.name} ({formatPrice(value.price)})({currentValue})
         </div>
       ))}
+    {console.log(currentValue)}
   </div>
 );
 export default OrderOptionIcons;
