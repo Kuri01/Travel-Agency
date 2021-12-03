@@ -14,7 +14,7 @@ const Hero = ({ variant = '', titleText, imageSrc, ...otherProps }) => (
     }
   >
     <h2 className={styles.title}>{titleText}</h2>
-    <img className={styles.image} alt='hero-image' src={imageSrc} />
+    <img className={styles.image} alt='hero' src={imageSrc} />
   </div>
 );
 

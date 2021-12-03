@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class OrderOptionText extends React.Component {
   constructor(props) {
@@ -34,5 +35,9 @@ class OrderOptionText extends React.Component {
     );
   }
 }
+
+OrderOptionText.propTypes = {
+  setOptionValue: PropTypes.func,
+};
 
 export default OrderOptionText;
