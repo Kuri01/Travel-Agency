@@ -19,11 +19,13 @@ const OrderOptionNumber = ({
         max={limits.max}
         onChange={(event) => setOptionValue(event.currentTarget.value)}
       />
-      (
-      <strong>
-        {formatPrice(calculateTotal(tripCost, { [id]: currentValue }))}
-      </strong>
-      )
+      {tripCost && currentValue ? (
+        <strong>
+          {formatPrice(calculateTotal(tripCost, { [id]: currentValue }))}
+        </strong>
+      ) : (
+        ''
+      )}
     </div>
   );
 };
