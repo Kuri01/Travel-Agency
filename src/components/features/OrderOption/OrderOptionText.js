@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const OrderOptionText = ({ setOptionValue }) => {
-  const [value] = useState('');
-
+const OrderOptionText = ({ setOptionValue, currentValue }) => {
   return (
     <input
       type='text'
-      value={value}
+      value={currentValue}
       onChange={(event) => setOptionValue(event.currentTarget.value)}
     />
   );
