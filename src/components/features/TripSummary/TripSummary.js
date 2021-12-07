@@ -31,13 +31,12 @@ const TripSummary = ({ id, image, name, cost, days, tags }) => (
 );
 
 TripSummary.propTypes = {
-  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  image: PropTypes.string,
-  name: PropTypes.string,
-  intro: PropTypes.string,
-  cost: PropTypes.string,
-  days: PropTypes.number,
-  tags: PropTypes.array,
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  cost: PropTypes.string.isRequired,
+  days: PropTypes.number.isRequired,
+  tags: PropTypes.array.isRequired,
 };
 
 export default TripSummary;

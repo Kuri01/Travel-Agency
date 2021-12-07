@@ -7,14 +7,14 @@ import 'react-datepicker/dist/react-datepicker.css';
 // import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 
 const OrderOptionDate = ({ setOptionValue }) => {
-  const [startDate] = useState(new Date());
+  const [startDate, setStartDate] = useState(new Date());
   console.log(startDate);
-  return (
-    <DatePicker
-      selected={startDate}
-      onChange={(date) => setOptionValue(date)}
-    />
-  );
+
+  const handleDate = (date) => {
+    setOptionValue(date);
+    setStartDate(date);
+  };
+  return <DatePicker selected={startDate} onChange={handleDate} />;
 };
 
 OrderOptionDate.propTypes = {

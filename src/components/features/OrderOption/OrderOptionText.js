@@ -1,40 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-class OrderOptionText extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: '' };
+const OrderOptionText = ({ setOptionValue }) => {
+  const [value] = useState('');
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleChange(event) {
-    this.setState({ value: event.target.value });
-  }
-
-  handleSubmit(event) {
-    console.log(this.state.value);
-    this.props.setOptionValue(this.state.value);
-    event.preventDefault();
-  }
-
-  render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          <input
-            type='text'
-            value={this.state.value}
-            onChange={this.handleChange}
-          />
-        </label>
-        <input type='submit' value='Submit' />
-      </form>
-    );
-  }
-}
+  return (
+    <input
+      type='text'
+      value={value}
+      onChange={(event) => setOptionValue(event.currentTarget.value)}
+    />
+  );
+};
 
 OrderOptionText.propTypes = {
   setOptionValue: PropTypes.func,
