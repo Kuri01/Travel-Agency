@@ -65,7 +65,7 @@
     "type": "text"
   },
   {
-    "id": "start-date",
+    "id": "startDate",
     "name": "Preferred trip start",
     "type": "date"
   }

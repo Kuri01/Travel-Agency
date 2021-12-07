@@ -23,8 +23,6 @@ const OrderOption = ({ name, type, currentValue, tripCost, ...otherProps }) => {
   if (!OptionComponent) {
     return null;
   } else {
-    console.log(name);
-
     return (
       <div className={styles.component}>
         <h3 className={styles.title}>{name}</h3>
