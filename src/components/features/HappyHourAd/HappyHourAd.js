@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './HappyHourAd.module.scss';
-
+import { formatTime } from '../../../utils/formatTime';
 const getCountdownTime = () => {
   const currentTime = new Date();
   const nextNoon = new Date(
@@ -38,7 +38,7 @@ class HappyHourAd extends React.Component {
       <div className={styles.component}>
         <h3 className={styles.title}>{title}</h3>
         <div className={styles.promoDescription}>
-          {countdownTime > 82800 ? descr : countdownTime}
+          {countdownTime > 82800 ? descr : formatTime(countdownTime)}
         </div>
       </div>
     );
