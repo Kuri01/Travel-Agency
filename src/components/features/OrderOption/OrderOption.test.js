@@ -95,7 +95,6 @@ for (let type in optionTypes) {
 
           const emptyOption = select.find('option[value=""]').length;
           expect(emptyOption).toBe(1);
-          console.log(renderedSubcomponent.debug());
           const options = select.find('option').not('[value=""]');
           expect(options.length).toBe(mockProps.values.length);
           expect(options.at(0).prop('value')).toBe(mockProps.values[0].id);
@@ -161,7 +160,6 @@ for (let type in optionTypes) {
             'div[className="number"]'
           );
           const targetInput = targetWrapper.find('input[type="number"]');
-          console.log(renderedSubcomponent.debug());
           expect(targetWrapper).toBeTruthy();
           expect(targetInput.length).toBe(1);
         });
@@ -182,7 +180,6 @@ for (let type in optionTypes) {
       }
       case 'text': {
         it('should contain all text inputs', () => {
-          console.log(renderedSubcomponent.debug());
           const targetInput = renderedSubcomponent.find('input[type="text"]');
           expect(targetInput.length).toBe(1);
         });

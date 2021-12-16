@@ -8,7 +8,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 const OrderOptionDate = ({ setOptionValue }) => {
   const [startDate, setStartDate] = useState(new Date());
-  console.log(startDate);
+  // console.log(startDate);
 
   const handleDate = (date) => {
     setOptionValue(date);
