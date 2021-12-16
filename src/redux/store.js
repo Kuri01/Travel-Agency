@@ -24,6 +24,27 @@ const initialState = {
     email: '',
     options: {},
   },
+  shifts: [
+    { name: 'Amanda', start: 8, end: 12, description: '678.243.8455' },
+    {
+      name: 'Tobias',
+      start: 12,
+      end: 16,
+      description: '278.443.6443',
+    },
+    {
+      name: 'Helena',
+      start: 16,
+      end: 22,
+      description: '167.280.3970',
+    },
+    {
+      name: '',
+      start: 22,
+      end: 8,
+      description: 'Now closed!',
+    },
+  ],
 };
 
 // define reducers
